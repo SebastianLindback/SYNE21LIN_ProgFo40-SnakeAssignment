@@ -6,31 +6,45 @@ namespace GruppInlUpp2kelett
 {
     class ConsoleRenderer
     {
-        private GameWorld world;
+        private GameWorld world = new GameWorld();
 
         public ConsoleRenderer(GameWorld gameWorld)
         {
-            // TODO Konfigurera Console-fönstret enligt världens storlek
-            // med hjälp av Console.SetWindowSize(int, int)
+            Console.Title = "Snake | Gruppuppgift";
             Console.SetWindowSize(50, 20);
-            
+            Console.SetBufferSize(50, 20);
+            Console.CursorVisible = false;
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.BackgroundColor = ConsoleColor.Black;
+
             world = gameWorld;
         }
 
-        public void Render()
+        public bool Render()
         {
             Console.Clear();
-            
-            
 
-            // TODO Rendera spelvärlden (och poängräkningen) t.ex. såhär:
-            /*
-            foreach (var obj in world.AllObjects)
+            GameObject.SnakeObject.Clear();
+            GameObject.SnakeObject.Add(new Position(GameObject.pos.X, GameObject.pos.Y));
+
+            try
             {
-                Console.SetCursorPosition(obj.Position.X, obj.Position.Y);
-                Console.Write(obj.Appearance);
+                Console.SetCursorPosition(GameObject.pos.X, GameObject.pos.Y);
             }
-            */
+            catch
+            {
+                return false;
+            }
+
+            for (int i = 0; i < GameObject.SnakeObject.Count(); i++)
+            {
+                Console.SetCursorPosition(GameObject.SnakeObject[i].X, GameObject.SnakeObject[i].Y);
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write("■");
+                Console.SetCursorPosition(0, 0);
+            }
+            return true;
         }
     }
 }

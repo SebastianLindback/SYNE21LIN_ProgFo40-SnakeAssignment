@@ -6,6 +6,8 @@ namespace GruppInlUpp2kelett
 {
     class GameWorld
     {
+        List<Player> listObj = new List<Player>();
+        
         // TODO
 
         public void Update()

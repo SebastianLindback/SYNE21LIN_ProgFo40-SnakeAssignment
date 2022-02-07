@@ -14,7 +14,7 @@ ConsoleRenderer renderer = new ConsoleRenderer(world);
 
 // TODO Skapa spelare och andra objekt etc. genom korrekta anrop till vår GameWorld-instans
 // ...
-
+Player p = new Player(1);
 // Huvudloopen
 bool running = true;
 while (running)
@@ -29,7 +29,7 @@ while (running)
         case ConsoleKey.Q:
             running = false;
             break;
-
+            
             // TODO Lägg till logik för andra knapptryckningar
             // ...
     }

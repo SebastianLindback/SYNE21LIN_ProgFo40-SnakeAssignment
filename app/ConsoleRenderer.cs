@@ -12,21 +12,25 @@ namespace GruppInlUpp2kelett
         {
             // TODO Konfigurera Console-fönstret enligt världens storlek
             // med hjälp av Console.SetWindowSize(int, int)
-
+            Console.SetWindowSize(50, 20);
+            
             world = gameWorld;
         }
 
         public void Render()
         {
             Console.Clear();
+            
+            
 
             // TODO Rendera spelvärlden (och poängräkningen) t.ex. såhär:
-
-            // foreach (var obj in world.AllObjects)
-            // {
-            //     Console.SetCursorPosition(obj.Position.X, obj.Position.Y);
-            //     Console.Write(obj.Appearance);
-            // }
+            /*
+            foreach (var obj in world.AllObjects)
+            {
+                Console.SetCursorPosition(obj.Position.X, obj.Position.Y);
+                Console.Write(obj.Appearance);
+            }
+            */
         }
     }
 }

@@ -4,53 +4,59 @@ using System.Text;
 
 namespace GruppInlUpp2kelett
 {
-    public class Position{
+    public class Position
+    {
             public Position(int x, int y)
             {
-            X = x;
-            Y = y;
+                X = x;
+                Y = y;
             }
             public int X { get; set;}
             public int Y { get; set;}
     }
     abstract class GameObject
     {
-        public Position pos = new Position(0,0);
+        public static Position pos = new Position(50 / 2, 20 / 2);
+        public static List<Position> SnakeObject = new List<Position>();
+
         char Appearance = '#';
 
-        void Update(){
-
+        void Update()
+        {
         }
-
-
         // TODO
-        
     }
+
     /*
     Skapa klassen Player som ärver från GameObject. 
     Ge den en ordentlig konstruktor och en variabel som håller reda på spelarens riktning (upp, ner, vänster, höger - det kan vara en sträng eller en enum). 
     Implementera metoden Update() så att den, beroende på spelarens riktning, flyttar sin position ett steg i rätt riktning.
     */
-    
-    class Player : GameObject{
-        public Player(int dir)
+
+    class Player : GameObject
+    {
+        public Player()
         {
-            direction = dir;
         }
-        public int direction { get; set;}
-        void Update(){
-            // Upp
-            if(direction == 0)
-            pos.Y++;
-            // Ner
-            if(direction == 1)
-            pos.Y--;
-            // Höger
-            if(direction == 2)
-            pos.X++;
-            // Vänster
-            if(direction == 3)
-            pos.X--;
+
+        public void Update(Direction direction)
+        {
+            if (direction == Direction.Down)
+            {
+                GameObject.pos.Y++;
+            }
+            if (direction == Direction.Up)
+            {
+                GameObject.pos.Y--;
+            }
+            if (direction == Direction.Left)
+            {
+                GameObject.pos.X--;
+            }
+            if (direction == Direction.Right)
+            {
+                GameObject.pos.X++;
+            }
         }
     }
 }

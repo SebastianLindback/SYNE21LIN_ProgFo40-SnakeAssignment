@@ -11,8 +11,6 @@ namespace GruppInlUpp2kelett
         public ConsoleRenderer(GameWorld gameWorld)
         {
             Console.Title = "Snake | Gruppuppgift";
-            Console.SetWindowSize(50, 20);
-            Console.SetBufferSize(50, 20);
             Console.CursorVisible = false;
 
             Console.ForegroundColor = ConsoleColor.Green;

@@ -35,11 +35,13 @@ namespace GruppInlUpp2kelett
 
     class Player : GameObject
     {
+        public static Direction direction = new Direction();
         public Player()
         {
+            direction = Direction.Right;
         }
 
-        public void Update(Direction direction)
+        public void Update()
         {
             if (direction == Direction.Down)
             {
@@ -57,6 +59,15 @@ namespace GruppInlUpp2kelett
             {
                 GameObject.pos.X++;
             }
+        }
+    }
+    class Food : GameObject
+    {
+        public Food()
+        {
+        }
+        public void Update()
+        {
         }
     }
 }

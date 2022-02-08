@@ -6,12 +6,13 @@ namespace GruppInlUpp2kelett
 {
     class GameWorld
     {
-        public Direction direction = new Direction();
-        public Player player = new Player();
+        Player player = new Player();
+        Food food = new Food();
 
         public void Update()
         {
-            player.Update(direction);
+            player.Update();
+            food.Update();
         }
     }
 }

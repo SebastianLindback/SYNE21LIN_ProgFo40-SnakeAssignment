@@ -12,6 +12,9 @@ namespace GruppInlUpp2kelett
         {
             Console.Title = "Snake | Gruppuppgift";
             Console.CursorVisible = false;
+            
+            Console.SetWindowSize(50, 20);
+            Console.SetBufferSize(50, 20);
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.BackgroundColor = ConsoleColor.Black;

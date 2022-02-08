@@ -5,7 +5,6 @@ using GruppInlUpp2kelett;
 // utan att bromsa upp spelet, som Console.ReadLine() gör
 ConsoleKey ReadKeyIfExists() => Console.KeyAvailable ? Console.ReadKey(intercept: true).Key : ConsoleKey.NoName;
 
-
 // Initialisera spelet
 const int frameRate = 5;
 GameWorld world = new GameWorld();
@@ -18,7 +17,6 @@ while (!(ReadKeyIfExists() == ConsoleKey.Enter))
 }
 
 // TODO Skapa spelare och andra objekt etc. genom korrekta anrop till vår GameWorld-instans
-// ...
 Player p = new Player();
 
 // Huvudloopen
@@ -39,25 +37,24 @@ while (running)
 
         // Ner
         case ConsoleKey.DownArrow:
-            world.direction = Direction.Down;
+            Player.direction = Direction.Down;
             break;
 
         // Upp
         case ConsoleKey.UpArrow:
-            world.direction = Direction.Up;
+            Player.direction = Direction.Up;
             break;
 
         // Höger
         case ConsoleKey.RightArrow:
-            world.direction = Direction.Right;
+            Player.direction = Direction.Right;
             break;
 
         case ConsoleKey.LeftArrow:
             // Vänster
-            world.direction = Direction.Left;
+            Player.direction = Direction.Left;
             break;
     }
-
 
     // Uppdatera världen och rendera om
     world.Update();

@@ -12,19 +12,21 @@ namespace GruppInlUpp2kelett
         {
             Console.Title = "Snake | Gruppuppgift";
             Console.CursorVisible = false;
+            
+            Console.SetWindowSize(50, 20);
+            Console.SetBufferSize(50, 20);
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.BackgroundColor = ConsoleColor.Black;
 
             world = gameWorld;
+            GameObject.SnakeObject.Add(new Position(GameObject.pos.X, GameObject.pos.Y));
+            GameObject.SnakeObject.Add(new Position(GameObject.pos.X, GameObject.pos.Y));
         }
 
         public bool Render()
         {
             Console.Clear();
-
-            GameObject.SnakeObject.Clear();
-            GameObject.SnakeObject.Add(new Position(GameObject.pos.X, GameObject.pos.Y));
 
             try
             {
@@ -37,6 +39,9 @@ namespace GruppInlUpp2kelett
 
             for (int i = 0; i < GameObject.SnakeObject.Count(); i++)
             {
+                GameObject.SnakeObject[i].X = GameObject.pos.X;
+                GameObject.SnakeObject[i].Y = GameObject.pos.Y;
+
                 Console.SetCursorPosition(GameObject.SnakeObject[i].X, GameObject.SnakeObject[i].Y);
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.Write("■");

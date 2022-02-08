@@ -39,6 +39,7 @@ namespace GruppInlUpp2kelett
             for (int i = 0; i < GameObject.SnakeObject.Count(); i++)
             {
                 GameObject.SnakeObject[i].X = GameObject.pos.X;
+                GameObject.SnakeObject[i].Y = GameObject.pos.Y;
 
                 Console.SetCursorPosition(GameObject.SnakeObject[i].X, GameObject.SnakeObject[i].Y);
                 Console.ForegroundColor = ConsoleColor.Green;

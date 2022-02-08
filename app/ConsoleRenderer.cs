@@ -21,7 +21,6 @@ namespace GruppInlUpp2kelett
 
             world = gameWorld;
             GameObject.SnakeObject.Add(new Position(GameObject.pos.X, GameObject.pos.Y));
-            GameObject.SnakeObject.Add(new Position(GameObject.pos.X, GameObject.pos.Y));
         }
 
         public bool Render()
@@ -40,7 +39,6 @@ namespace GruppInlUpp2kelett
             for (int i = 0; i < GameObject.SnakeObject.Count(); i++)
             {
                 GameObject.SnakeObject[i].X = GameObject.pos.X;
-                GameObject.SnakeObject[i].Y = GameObject.pos.Y;
 
                 Console.SetCursorPosition(GameObject.SnakeObject[i].X, GameObject.SnakeObject[i].Y);
                 Console.ForegroundColor = ConsoleColor.Green;

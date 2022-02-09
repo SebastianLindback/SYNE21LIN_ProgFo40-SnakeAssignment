@@ -28,3 +28,18 @@ C:\Users\sebbe\github\C#\inlämning\GruppInlUppg\snakeUppgift\app\obj\Debug\net6
 C:\Users\sebbe\github\C#\inlämning\GruppInlUppg\snakeUppgift\app\obj\Debug\net6.0\ref\GruppInlUppg.dll
 C:\Users\sebbe\github\C#\inlämning\GruppInlUppg\snakeUppgift\app\obj\Debug\net6.0\GruppInlUppg.pdb
 C:\Users\sebbe\github\C#\inlämning\GruppInlUppg\snakeUppgift\app\obj\Debug\net6.0\GruppInlUppg.genruntimeconfig.cache
+C:\Users\Tobias Parnebrant\source\repos\snake\asd\snakeUppgift\app\bin\Debug\net6.0\GruppInlUppg.exe
+C:\Users\Tobias Parnebrant\source\repos\snake\asd\snakeUppgift\app\bin\Debug\net6.0\GruppInlUppg.deps.json
+C:\Users\Tobias Parnebrant\source\repos\snake\asd\snakeUppgift\app\bin\Debug\net6.0\GruppInlUppg.runtimeconfig.json
+C:\Users\Tobias Parnebrant\source\repos\snake\asd\snakeUppgift\app\bin\Debug\net6.0\GruppInlUppg.dll
+C:\Users\Tobias Parnebrant\source\repos\snake\asd\snakeUppgift\app\bin\Debug\net6.0\ref\GruppInlUppg.dll
+C:\Users\Tobias Parnebrant\source\repos\snake\asd\snakeUppgift\app\bin\Debug\net6.0\GruppInlUppg.pdb
+C:\Users\Tobias Parnebrant\source\repos\snake\asd\snakeUppgift\app\obj\Debug\net6.0\GruppInlUppg.csproj.AssemblyReference.cache
+C:\Users\Tobias Parnebrant\source\repos\snake\asd\snakeUppgift\app\obj\Debug\net6.0\GruppInlUppg.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tobias Parnebrant\source\repos\snake\asd\snakeUppgift\app\obj\Debug\net6.0\GruppInlUppg.AssemblyInfoInputs.cache
+C:\Users\Tobias Parnebrant\source\repos\snake\asd\snakeUppgift\app\obj\Debug\net6.0\GruppInlUppg.AssemblyInfo.cs
+C:\Users\Tobias Parnebrant\source\repos\snake\asd\snakeUppgift\app\obj\Debug\net6.0\GruppInlUppg.csproj.CoreCompileInputs.cache
+C:\Users\Tobias Parnebrant\source\repos\snake\asd\snakeUppgift\app\obj\Debug\net6.0\GruppInlUppg.dll
+C:\Users\Tobias Parnebrant\source\repos\snake\asd\snakeUppgift\app\obj\Debug\net6.0\ref\GruppInlUppg.dll
+C:\Users\Tobias Parnebrant\source\repos\snake\asd\snakeUppgift\app\obj\Debug\net6.0\GruppInlUppg.pdb
+C:\Users\Tobias Parnebrant\source\repos\snake\asd\snakeUppgift\app\obj\Debug\net6.0\GruppInlUppg.genruntimeconfig.cache

@@ -9,6 +9,7 @@ namespace GruppInlUpp2kelett
         private GameWorld world = new GameWorld();
         private Position FoodPos;
         private bool matredo;
+        int score=0;
 
         public ConsoleRenderer(GameWorld gameWorld)
         {
@@ -28,6 +29,7 @@ namespace GruppInlUpp2kelett
         public bool Render()
         {
             Console.Clear();
+            Console.WriteLine("Score:"+ score);
 
             try
             {
@@ -55,6 +57,7 @@ namespace GruppInlUpp2kelett
             if (GameObject.SnakeObject[0].X == GameObject.FoodPos.X && GameObject.SnakeObject[0].Y == GameObject.FoodPos.Y)
             {
                 GameWorld.matredo = !GameWorld.matredo;
+                score++;
             }
 
             Console.SetCursorPosition(GameObject.FoodPos.X, GameObject.FoodPos.Y);

@@ -18,6 +18,7 @@ namespace GruppInlUpp2kelett
     {
         public static Position pos = new Position(50 / 2, 20 / 2);
         public static List<Position> SnakeObject = new List<Position>();
+        public static Position FoodPos { get; set; }
 
         char Appearance = '#';
 
@@ -36,6 +37,7 @@ namespace GruppInlUpp2kelett
     class Player : GameObject
     {
         public static Direction direction = new Direction();
+
         public Player()
         {
             direction = Direction.Right;
@@ -68,6 +70,8 @@ namespace GruppInlUpp2kelett
         }
         public void Update()
         {
+            Random rand = new Random();
+            FoodPos = new Position(rand.Next(0, Console.WindowWidth), rand.Next(0, Console.WindowHeight));
         }
     }
 }

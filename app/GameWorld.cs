@@ -8,11 +8,17 @@ namespace GruppInlUpp2kelett
     {
         Player player = new Player();
         Food food = new Food();
+        public static bool matredo = true;
 
         public void Update()
         {
             player.Update();
-            food.Update();
+
+            if (matredo)
+            {
+                food.Update();
+                matredo = !matredo;
+            }
         }
     }
 }

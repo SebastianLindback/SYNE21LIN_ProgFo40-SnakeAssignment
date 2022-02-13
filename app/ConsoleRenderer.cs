@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace GruppInlUpp2kelett
 {
@@ -10,14 +11,16 @@ namespace GruppInlUpp2kelett
         private Position FoodPos;
         private bool matredo;
         int score=0;
+        
 
         public ConsoleRenderer(GameWorld gameWorld)
         {
             Console.Title = "Snake | Gruppuppgift";
             Console.CursorVisible = false;
-            
-            Console.SetWindowSize(50, 20);
+            Console.Clear();
+            Console.SetWindowSize(50,20);
             Console.SetBufferSize(50, 20);
+            
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.BackgroundColor = ConsoleColor.Black;
@@ -29,8 +32,11 @@ namespace GruppInlUpp2kelett
         public bool Render()
         {
             Console.Clear();
+            
+            
+            
             Console.WriteLine("Score:"+ score);
-
+            
             try
             {
                 Console.SetCursorPosition(GameObject.pos.X, GameObject.pos.Y);
@@ -42,10 +48,25 @@ namespace GruppInlUpp2kelett
 
             // Rendera Snake
             for (int i = 0; i < GameObject.SnakeObject.Count(); i++)
-            {
+            {   
                 GameObject.SnakeObject[i].X = GameObject.pos.X;
                 GameObject.SnakeObject[i].Y = GameObject.pos.Y;
+                
+                if(Player.historyPosition.Count > score){
+                    for (int y = 0; y < score; y++)
+                    {
+                        int tailX = Player.historyPosition[y].Item1;
+                        int tailY = Player.historyPosition[y].Item2;
+                        Console.SetCursorPosition(tailX, tailY);
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("■");
+                        Console.SetCursorPosition(0, 0);
+                    }
+                }
 
+                   
+                
+                
                 Console.SetCursorPosition(GameObject.SnakeObject[i].X, GameObject.SnakeObject[i].Y);
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.Write("■");

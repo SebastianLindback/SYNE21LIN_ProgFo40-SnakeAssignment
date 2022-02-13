@@ -37,14 +37,16 @@ namespace GruppInlUpp2kelett
     class Player : GameObject
     {
         public static Direction direction = new Direction();
-
+        public static List<Tuple<int,int>> historyPosition = new List<Tuple<int,int>>();
         public Player()
         {
             direction = Direction.Right;
+            
         }
-
+        
         public void Update()
         {
+            
             if (direction == Direction.Down)
             {
                 GameObject.pos.Y++;
@@ -60,6 +62,11 @@ namespace GruppInlUpp2kelett
             if (direction == Direction.Right)
             {
                 GameObject.pos.X++;
+            }
+            foreach (var item in GameObject.SnakeObject)
+            { 
+                historyPosition.Insert(0, (Tuple.Create(item.X, item.Y)));
+                if (historyPosition.Count > 100){historyPosition.RemoveAt(100);}
             }
         }
     }
